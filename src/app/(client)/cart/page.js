@@ -3,6 +3,7 @@
 import React from "react";
 import { ProductsData } from "../data/data";
 import { useCart } from "../Context/CartContext";
+import Link from "next/link";
 
 
 const Cart = () => {
@@ -114,13 +115,14 @@ const Cart = () => {
               <span className="ml-auto">PKR{subtotal + shipping + tax}</span>
             </li>
           </ul>
-
+            <Link href={'/checkout'}>
           <button
             type="button"
             className="mt-6 text-base px-4 py-2 tracking-wide w-full bg-black hover:bg-slate-800 text-white"
           >
             Make Payment
           </button>
+          </Link>
         </div>
       </div>
     </div>
